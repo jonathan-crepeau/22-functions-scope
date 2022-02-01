@@ -26,3 +26,13 @@ const palindrome = (string) => {
   // else
   // return false;
 }
+
+
+// SECTION - 3. Digit Sum
+
+const digitSum = (inputNum) => {
+  return [...(inputNum + "")].map(Number).reduce((a, b) => a + b, 0);
+  // return nums.reduce((a,b) => a + b, 0);
+}
+
+// NOTE - syntax of solution above from: https://codehandbook.org/split-number-individual-digits-using-javascript/
