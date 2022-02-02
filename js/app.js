@@ -36,3 +36,10 @@ const digitSum = (inputNum) => {
 }
 
 // NOTE - syntax of solution above from: https://codehandbook.org/split-number-individual-digits-using-javascript/
+
+
+// SECTION 4. Pythagoras
+
+const calculateSide = (sideA, sideB) => {
+  return Math.sqrt((sideA**2) + (sideB**2));
+}
