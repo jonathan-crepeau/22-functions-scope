@@ -43,11 +43,26 @@ const arrayMethod = (input) => {
 // map method
   // iterate through, if odd, add dash
 
+// NOTE - Don't fuck with a good thing:
+// const dashTake2 = (num) => {
+//   let nums = String(num).split("");
+//   for (let a = 0; a < nums.length; a++)
+//     if (nums[a] % 2 !== 0) {
+//       nums[a] += '-';
+//     }
+//   console.log(nums);
+// }
+
+// REVIEW - "First Draft" Solution
 const dashTake2 = (num) => {
   let nums = String(num).split("");
   for (let a = 0; a < nums.length; a++)
-    if (nums[a] % 2 !== 0) {
+    if (nums[a] % 2 !== 0 && nums[a + 1] % 2 !== 0 && nums[a] != nums[nums.length - 1]) {
       nums[a] += '-';
     }
+  nums = nums.join('');
   console.log(nums);
 }
+
+// if (nums[a] % 2 !== 0 && )
+// for last odd number, some sort of conditional statment (blah blah && placement isn't array[array.length - 1]);
