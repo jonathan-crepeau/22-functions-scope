@@ -54,6 +54,7 @@ const arrayMethod = (input) => {
 // }
 
 // REVIEW - "First Draft" Solution
+
 const dashTake2 = (num) => {
   let nums = String(num).split("");
   for (let a = 0; a < nums.length; a++)
@@ -66,3 +67,16 @@ const dashTake2 = (num) => {
 
 // if (nums[a] % 2 !== 0 && )
 // for last odd number, some sort of conditional statment (blah blah && placement isn't array[array.length - 1]);
+
+
+// SECTION - 3. Reverse String
+
+// 1. Write a function reverseString that takes a string as a parameter and returns that string with the letters reversed without using .split(), .reverse(), or .join().
+
+const reverseString = (inputString) => {
+  let string = '';
+  for (let a = inputString.length - 1; a >= 0; a--) {
+    string = string + inputString[a];
+  }
+  return string;
+}
