@@ -127,3 +127,19 @@ const punctuationIsPalindrome = (stringInput) => {
     return false;
   } else return true;
 };
+
+
+// SECTION 6. Word Palindrome
+
+// 1. Make a "word palindrome" function that returns true if the words in a phrase are the same backwards and forwards. It should not care about spacing, capitalization, or punctuation.
+
+const regexRemove = /[" "!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
+
+const wordPalindrome = (stringInput) => {
+  const stripped = stringInput.replace(regexRemove, '').toLowerCase();
+  if (
+    stripped !==
+     stripped.split('').reverse().join('')
+  ) { return false }
+  else return true;
+}
