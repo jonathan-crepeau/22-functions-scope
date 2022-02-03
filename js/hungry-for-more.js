@@ -80,3 +80,36 @@ const reverseString = (inputString) => {
   }
   return string;
 }
+
+
+// SECTION 4. Updated Palindrome
+
+// 1. Make your palindrome function from problem two above work regardless of spacing (or capitalization). So, for example, "Sit on a potato pan Otis" or "Bird rib" would pass the test.
+
+let sentence = "Today I am working on my coding.";
+
+// NOTE - Using a substring as the first parameter in 'replace()' -- instead of a regular expression -- will only replace the first instance of the matching substring. It has the syntax: 'replace(substr, newSubstr)'
+
+// console.log(sentence.replace(' ', ''));
+
+// NOTE - GLOBAL replace can only be done with a regular expression. In the following example, the regular expression, 're', includes the global and ignore case flags which permits 'replace()' to replace ach occurence of a space (' ') in the string with no-space (''):
+
+let re = / /gi;
+
+// console.log(sentence.replace(re, ""));
+
+// NOTE - Rough Draft:
+// const updatedPalindrome = (stringInput) => {
+//   let squishedInput = stringInput.replace(re, '').toLowerCase('');
+//   let reverseSquished = squishedInput.split('').reverse().join('');
+//   if (squishedInput !== reverseSquished)
+//     return false;
+//   else return true;
+// }
+
+// NOTE - Revised, v1.2:
+const updatedPalindrome = (stringInput) => {
+  if (stringInput.replace(re, '').toLowerCase('') !== stringInput.replace(re, '').toLowerCase('').split('').reverse().join(''))
+    return false;
+  else return true;
+}
