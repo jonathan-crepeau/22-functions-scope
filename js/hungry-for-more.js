@@ -113,3 +113,17 @@ const updatedPalindrome = (stringInput) => {
     return false;
   else return true;
 }
+
+
+// SECTION 5. Punctuation-Blind Palindrome
+
+// 1. Make your palindrome function work even if the string contains punctuation. So: "Sit on a potato pan, Otis!!!" or "A man, a plan, a canal: Panama." or "Cigar? Toss it in a can! It is so tragic." would pass the test.
+
+const punctuationPlusSpace = /[" "!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
+
+const punctuationIsPalindrome = (stringInput) => {
+  let stripped = stringInput.replace(punctuationPlusSpace, '').toLowerCase();
+  if (stripped !== stripped.split('').reverse().join('')) {
+    return false;
+  } else return true;
+};
